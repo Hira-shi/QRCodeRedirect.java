@@ -1,0 +1,1 @@
+# Making my own redirection of QR Code in java
