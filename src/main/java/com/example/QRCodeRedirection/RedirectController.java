@@ -10,12 +10,17 @@ public class RedirectController {
 
     @GetMapping("/")
     public RedirectView redirect(@RequestHeader(value = "User-Agent", defaultValue = "") String userAgent) {
+        String destination;
+
         if (userAgent.toLowerCase().contains("android")) {
-            return new RedirectView(""); // Add link for Android
+            destination = ""; // add for Android
         } else if (userAgent.toLowerCase().contains("iphone") || userAgent.toLowerCase().contains("ipad")) {
-            return new RedirectView(""); // Add link for iOS
+            destination = ""; // add for iOS
         } else {
-            return new RedirectView(""); // Add link for other devices
+            destination = ""; // add the URL of the website you want to redirect to
         }
+
+        return new RedirectView(destination);
     }
+
 }

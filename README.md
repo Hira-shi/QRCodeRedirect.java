@@ -1,1 +1,1 @@
-# Making my own QRCodeRedirect in java
+# Making my own redirection of QR Code in java
